@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+    apache:
+        image: httpd
+        container_name: apache
+        ports:
+          - "8080:80"
+        volumes:
+          - ./www/website.ru:/var/www/website.ru
+          - ./httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+          - ./httpd/httpd-vhosts.conf:/usr/local/apache2/conf/extra/httpd-vhosts.conf
+        links:
+          - php
+        depends_on:
+          - php
+    php:
+        build: ./php
+        container_name: php
+        volumes:
+          - ./www/website.ru:/var/www/website.ru
+          - ./php/php.ini:/usr/local/etc/php/php.ini
+        links:
+          - mariadb
+        depends_on:
+          - mariadb
+      
+    mariadb:
+        image: mariadb:10.5
+        container_name: mysql
+        restart: unless-stopped
+        volumes:
+          - ./mysql:/var/lib/mysql
+        environment:
+          MYSQL_USERNAME: 'user'
+          MYSQL_ROOT_PASSWORD: 'root'
+
+    phpmyadmin:
+        image: phpmyadmin
+        container_name: phpmyadmin
+        links: 
+          - mariadb:db
+        ports:
+          - 8765:80
+        environment:
+          MYSQL_USERNAME: 'user'
+          MYSQL_ROOT_PASSWORD: 'root'
+        depends_on:
+          - mariadb

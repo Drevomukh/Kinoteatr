@@ -1,0 +1,716 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	transition: all .3s ease-in-out;
+}
+header {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 55px;
+	background-color: #5f5572;
+	-webkit-user-select: none;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+::-webkit-scrollbar {
+	width: 9px;
+	background-color: #7d7985;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #b9b8ba;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #f3faf7;
+}
+.header_row {
+	display: flex;
+	justify-content: flex-start;
+	width: 1200px;
+	height: 55px;
+}
+.header_row_logo {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 10%;
+	height: 55px;
+}
+.header_row_logo p {
+	cursor: pointer;
+	font-size: 25px;
+	color: #EDE49D;
+	font-family: 'Raleway', sans-serif;
+}
+.header_row_logo img {
+	cursor: pointer;
+	max-width: 90%;
+	max-height: 90%;
+	object-fit: cover;
+}
+.header_row_search {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 65%;
+	height: 55px;
+}
+.header_row_search p {
+	cursor: pointer;
+	margin-left: 10px;
+	font-size: 22px;
+	color: #EDE49D;
+	font-family: 'Raleway', sans-serif;
+}
+.header_row_search_form {
+	display: none;
+	width: 0%;             /*40%*/
+	height: 22px;
+	margin-left: 5px;
+}
+.header_row_search_form form {
+	width: 100%;
+	height: 22px;
+	background-color: #EDE49D;
+	border-radius: 10px;
+}
+.header_row_search_form input {
+	width: 100%;
+	height: 22px;
+	margin-left: 5px;
+	background-color: #EDE49D;
+	color: black;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+}
+.header_row_signin_up {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 25%;
+	height: 55px;
+}
+.header_row_signin_up p {
+	cursor: pointer;
+	margin-left: 3px;
+	font-size: 22px;
+	color: #EDE49D;
+	font-family: 'Raleway', sans-serif;
+}
+.header_row_signin_up p a {
+	color: #EDE49D;
+}
+.header_row_mobile_menu {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 25%;
+	height: 55px;
+}
+.header_row_mobile_menu_but {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #EDE49D;
+}
+.header_row_mobile_menu_but_square {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-end;
+	width: 25px;
+	height: 27px;
+}
+.header_row_mobile_menu_but_square_line1 {
+	width: 25px;
+	height:	3px;
+	background-color: #5f5572;
+}
+.header_row_mobile_menu_but_square_line2 {
+	width: 20px;
+	height:	3px;
+	background-color: #5f5572;
+}
+.header_row_mobile_menu_but_square_line3 {
+	width: 15px;
+	height:	3px;
+	background-color: #5f5572;
+}
+.upper_space {
+	display: flex;
+	justify-content: center;
+	margin-top: 1px;
+	width: 100%;
+	height: 106px;
+}
+.upper_space_adapt {
+	display: flex;
+	width: 1200px;
+	height: 100%;
+}
+.upper_space_adapt_logo {
+	width: 10%;
+	height: 100%;
+}
+.upper_space_adapt_search {
+	display: flex;
+	width: 65%;
+	height: 100%;
+}
+/*----------------------------------------------------------------------------------*/
+.upper_space_adapt_search_div {
+	display: none;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+	border-radius: 5px;
+	border: 1px solid #797979;
+	overflow-y: auto;
+}
+.upper_space_adapt_search_div a {
+	width: 90%;
+	transition: all .3s ease-in-out;
+}
+.upper_space_adapt_search_div hr {
+	width: 90%;
+	height: 1px;
+	background-color: grey;
+}
+.upper_space_adapt_search_div_film {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	height: 40px;
+}
+.upper_space_adapt_search_div a:hover {
+	background-color: #EAEAEA;
+}
+.upper_space_adapt_search_div_film_pline1 {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	height: 50%;
+}
+.upper_space_adapt_search_div_film_pline1 p {
+	font-size: 17px;
+	color: black;
+	font-family: 'Raleway', sans-serif;
+}
+.upper_space_adapt_search_div_film_pline2 {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	height: 50%;
+}
+.upper_space_adapt_search_div_film_pline2 p {
+	font-size: 13px;
+	color: grey;
+	font-family: 'Raleway', sans-serif;
+}
+.activated_mobile_menu {
+	display: none;
+	flex-direction: column;
+	/*justify-content: space-between;*/
+	align-items: center;
+	width: 36%;
+	height: 0px; /*105*/
+	background-color: #5f5572;
+	border-radius: 10px;
+}
+.activated_mobile_menu a{
+	color: #EDE49D;
+}
+.activated_mobile_menu_but1 {
+	width: 100%;
+	height: 35px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	/*border-top: solid 1px #EDE49D;
+	border-bottom: solid 1px #EDE49D;*/
+}
+.activated_mobile_menu_but1 p {
+	cursor: pointer;
+	font-size: 22px;
+	color: #EDE49D;
+	font-family: 'Raleway', sans-serif;
+}
+.activated_mobile_menu_but2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 30px;
+	display: none;
+}
+.activated_mobile_menu_but2 p {
+	cursor: pointer;
+	font-size: 22px;
+	color: #EDE49D;
+	font-family: 'Raleway', sans-serif;
+}
+.activated_mobile_menu_but3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 30px;
+	display: none;
+}
+.activated_mobile_menu_but3 p {
+	cursor: pointer;
+	font-size: 22px;
+	color: #EDE49D;
+	font-family: 'Raleway', sans-serif;
+}
+.activated_mobile_menu hr {
+	width: 90%;
+	/*height: 1px;*/
+	background-color: #EDE49D;
+	display: none;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	/*height: 400px;*/
+}
+.content {
+	display: flex;
+	justify-content: space-between;
+	width: 1200px;
+	height: 95%;
+}
+.content_leftside {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	width: 35%;
+	height: 100%;
+}
+.content_leftside img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+}
+.content_rightside {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 60%;
+	height: 100%;
+}
+.content_rightside p {
+	font-size: 22px;
+	color: black;
+	font-family: 'Raleway', sans-serif;
+	/*border-bottom: 1px solid black;*/
+}
+.content_rightside h1 {
+	font-size: 22px;
+	color: black;
+	font-family: 'Raleway', sans-serif;
+	/*border-bottom: 1px solid black;*/
+}
+.content_rightside p a {
+	color: black;
+}
+.content_rightside_change_pass {
+	display: none;
+	margin-top: 10px;
+	width: 100%;
+	height: 100px;
+}
+.content_rightside_change_pass form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+	height: 100%;
+}
+.content_rightside_change_pass form input {
+	outline: none;
+	width: 30%;
+	height: 27px;
+	border: 1px solid #dbdbdb;
+	transition: all .3s ease-in-out;
+}
+.content_rightside_change_pass form input:hover {
+	border: 1px solid black;
+}
+.content_rightside_change_pass form div {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	height: 27px;
+	border: 1px solid #dbdbdb;
+	transition: all .3s ease-in-out;
+	-webkit-user-select: none;
+}
+.content_rightside_change_pass form div:hover {
+	border: 1px solid black;
+}
+.content_rightside_change_pass form div p {
+	border: none;
+}
+/**/
+.content_rightside_change_email {
+	display: none;
+	margin-top: 10px;
+	width: 100%;
+	height: 100px;
+}
+.content_rightside_change_email form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+	height: 100%;
+}
+.content_rightside_change_email form input {
+	outline: none;
+	width: 30%;
+	height: 27px;
+	border: 1px solid #dbdbdb;
+	transition: all .3s ease-in-out;
+}
+.content_rightside_change_email form input:hover {
+	border: 1px solid black;
+}
+.content_rightside_change_email form div {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	height: 27px;
+	border: 1px solid #dbdbdb;
+	transition: all .3s ease-in-out;
+	-webkit-user-select: none;
+}
+.content_rightside_change_email form div:hover {
+	border: 1px solid black;
+}
+.content_rightside_change_email form div p {
+	border: none;
+}
+.liked_films {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 500px;
+}
+.liked_films_body {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 1200px;
+	height: 100%;
+}
+.liked_films_body_txtblock {
+	display: flex;
+	align-items: center;
+	width: 50%;
+	height: 30px;
+}
+.liked_films_body_txtblock p {
+	font-size: 22px;
+	color: black;
+	font-family: 'Raleway', sans-serif;
+}
+.plus_body {
+	cursor: pointer;
+	width: 31px;
+	height: 31px;
+}
+.plus_body_line1 {
+	position: absolute;
+	margin-top: 13px;
+	margin-left: 7px;
+	width: 20px;
+	height: 3px;
+	background-color: black;
+	z-index: 1;
+}
+.plus_body_line2 {
+	display: none;
+	position: absolute;
+	margin-left: 15px;
+	margin-top: 5px;
+	width: 3px;
+	height: 20px;
+	background-color: black;
+	margin-right: 15px;
+	z-index: 2;
+}
+.liked_films_body_list {
+	width: 100%;
+}
+.search_by_filters_div_body_lover_menu {
+	width: 100%;
+}
+.search_by_filters_div_body_lover_menu_film {
+	display: flex;
+	width: 100%;
+	margin-top: 10px;
+	height: 250px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+.search_by_filters_div_body_lover_menu_film a {
+	width: 100%;
+}
+.search_by_filters_div_body_lover_menu_film:hover {
+	background-color: grey;
+	opacity: 0.9;
+}
+.search_by_filters_div_body_lover_menu_film_av {
+	display: flex;
+	justify-content: center;
+	width: 25%;
+	height: 100%;
+}
+.search_by_filters_div_body_lover_menu_film_av img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+}
+.search_by_filters_div_body_lover_menu_film_review {
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	height: 100%;
+}
+.search_by_filters_div_body_lover_menu_film_review p {
+	font-size: 18px;
+	color: black;
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+a[href='#']:hover {
+	color: #adadad;
+}
+@media (max-width: 1200px) {
+	.header_row{
+		max-width: 970px;
+	}
+	.liked_films_body {
+		max-width: 970px;
+	}
+	.content {
+		max-width: 970px;
+	}
+	.content_rightside_change_pass form input {
+		width: 35%;
+	}
+	.content_rightside_change_pass form div {
+		width: 35%;
+	}
+	.content_rightside_change_email form input {
+		width: 35%;
+	}
+	.content_rightside_change_email form div {
+		width: 35%;
+	}
+}
+@media (max-width: 992px) {
+	.header_row{
+		max-width: 750px;
+	}
+	.liked_films_body {
+		max-width: 750px;
+	}
+	.header_row_search {
+		margin-left: 10px;
+	}
+	.header_row p {
+		font-size: 21px;
+	}
+	.liked_films_body_txtblock p {
+		font-size: 21px;
+	}
+	.content {
+		max-width: 750px;
+	}
+	.content_rightside_change_pass form input {
+		width: 40%;
+	}
+	.content_rightside_change_pass form div {
+		width: 40%;
+	}
+	.content_rightside_change_email form input {
+		width: 40%;
+	}
+	.content_rightside_change_email form div {
+		width: 40%;
+	}
+	.search_by_filters_div_body_lover_menu_film_av {
+		width: 40%;
+	}
+	.search_by_filters_div_body_lover_menu_film_review {
+		width: 60%;
+	}
+}
+@media (max-width: 790px) {
+	.header_row{
+		max-width: none;
+	}
+	.liked_films_body {
+		max-width: 100%;
+	}
+	.header_row_signin_up {
+		display: none;
+	}
+	.header_row_mobile_menu {
+		display: flex;
+	}
+	.header_row_mobile_menu {
+		width: 15%;
+	}
+	.header_row_search {
+		width: 70%;
+	}
+	.header_row_logo {
+		width: 15%;
+	}
+	.content {
+		max-width: 100%;
+	}
+	.content_rightside_change_pass form input {
+		width: 50%;
+	}
+	.content_rightside_change_pass form div {
+		width: 50%;
+	}
+	.content_rightside_change_email form input {
+		width: 50%;
+	}
+	.content_rightside_change_email form div {
+		width: 50%;
+	}
+}
+@media (max-width: 610px) {
+	.header_row_mobile_menu {
+		width: 15%;
+	}
+	.header_row_search {
+		width: 67%;
+		margin-left: 3px;
+	}
+	.header_row_logo {
+		width: 18%;
+	}
+	.activated_mobile_menu_but1 p {
+		font-size: 19px;
+	}
+	.activated_mobile_menu_but2 p {
+		font-size: 19px;
+	}
+	.activated_mobile_menu_but3 p {
+		font-size: 19px;
+	}
+	.activated_mobile_menu {
+		width: 46%;
+	}
+	.content_rightside_change_pass form input {
+		width: 70%;
+	}
+	.content_rightside_change_pass form div {
+		width: 70%;
+	}
+	.content_rightside_change_email form input {
+		width: 70%;
+	}
+	.content_rightside_change_email form div {
+		width: 70%;
+	}
+	.content_rightside p {
+		font-size: 20px;
+	}
+	.liked_films_body_txtblock p {
+		font-size: 20px;
+	}
+	.search_by_filters_div_body_lover_menu_film {
+		width: 95%;
+		margin-left: 0px;
+	}
+	.search_by_filters_div_body_lover_menu {
+		overflow-y: auto;
+		justify-content: center;
+	}
+	.search_by_filters_div_lover_pages_menu {
+		display: none;
+	}
+	.search_by_filters_div_body_upper_menu form div select {
+		width: 95%;
+	}
+	.search_by_filters_div_body_lover_menu_film_av {
+		width: 45%;
+	}
+	.search_by_filters_div_body_lover_menu_film_review {
+		width: 55%;
+	}
+	.liked_films_body_txtblock {
+		width: 100%;
+	}
+}
+@media (max-width: 490px) {
+	.content_rightside_change_pass form input {
+		width: 96%;
+	}
+	.content_rightside_change_pass form div {
+		width: 96%;
+	}
+	.content_rightside_change_email form input {
+		width: 96%;
+	}
+	.content_rightside_change_email form div {
+		width: 96%;
+	}
+	.content_rightside p {
+		font-size: 18px;
+	}
+	.liked_films_body_txtblock p {
+		font-size: 18px;
+	}
+	.search_by_filters_div_body_lover_menu_film_av {
+		width: 50%;
+	}
+	.search_by_filters_div_body_lover_menu_film_review {
+		width: 50%;
+	}
+	.search_by_filters_div_body_lover_menu_film_review p {
+		font-size: 15px;
+	}
+}
+@media (max-width: 375px) { 
+	.content_rightside p {
+		font-size: 15px;
+	}
+	.liked_films_body_txtblock p {
+		font-size: 15px;
+	}
+}
